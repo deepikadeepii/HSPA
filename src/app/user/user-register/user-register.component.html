@@ -11,7 +11,7 @@
               <input type="text" class="form-control" 
               formControlName="userName" >
 
-              <span *ngIf="!userName.valid && userName.touched" class="error-block">
+              <span *ngIf="!userName.valid && userName.touched " class="error-block">
                 Please provide name
               </span>
           </div>
@@ -60,7 +60,7 @@
             <input type="text" class="form-control" formControlName="mobile">
             <span  *ngIf="!mobile.valid && mobile.touched" class="error-block">
               <span *ngIf="mobile.hasError('required')">
-                Please provide mobile
+                Please provide mobile number
               </span>
               <span *ngIf="mobile.hasError('maxlength')" class="error-block">
                 Invalid mobile number
@@ -68,13 +68,11 @@
           </span>
         </div>
         
-  
           <div class="form-group col-12">
             <button type="submit" class="btn btn-info">Save</button>
             <button type="reset" class="btn btn-secondary m-2">Cancel</button>
           </div>
-          Form Values: {{registerationForm.value  | json}} <br/>
-          Form Status: {{registerationForm.valid}}
+      
   
       </form>
       </div>
