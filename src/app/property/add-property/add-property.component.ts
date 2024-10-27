@@ -12,18 +12,15 @@ import { IProperty } from '../IProperty.interface';
 export class AddPropertyComponent implements OnInit {
   @ViewChild('Form') addPropertyForm !: NgForm;
   @ViewChild('formTabs') formTabs?: TabsetComponent;
+  
 
-  // Will come for masters
-  propertyTypes: Array<string> = ['House', 'Apartment', 'Duplex']
-  furnishTypes: Array<string> = ['Fully', 'Semi', 'Unfurnished']
-
+  
   propertyView: IProperty = {
     Id: null,
     Name: '',
     Price: null,
     SellRent: null,
-    Type: null,
-  
+    Type: null
     
   };
 
@@ -43,9 +40,12 @@ export class AddPropertyComponent implements OnInit {
     console.log(this.addPropertyForm);
   }
   selectTab(tabId: number) {
-      if (this.formTabs?.tabs[tabId]) {
-        this.formTabs.tabs[tabId].active = true;
+    if (this.formTabs?.tabs[tabId]) {
+      this.formTabs.tabs[tabId].active = true;
+    }
+  }
+  
+  
+}
 
-}
-}
-}
+
