@@ -13,6 +13,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PropertyCardComponent } from './property/property-card/property-card.component';
@@ -66,7 +68,7 @@ const appRoutes: Routes =[
     BsDropdownModule,
     TabsModule,
     ButtonsModule,
-    BsDatepickerModule
+    BsDatepickerModule,
   ],
   providers: [
     HousingService,
