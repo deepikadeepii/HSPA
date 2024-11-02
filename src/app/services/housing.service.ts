@@ -3,6 +3,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { IProperty } from '../model/iproperty';
+import { Property } from '../model/property';
 
 
 
@@ -27,5 +28,8 @@ export class HousingService {
       })
     );
     
+  }
+  addProperty(property: Property) {
+    localStorage.setItem('newProp', JSON.stringify(property));
   }
 }

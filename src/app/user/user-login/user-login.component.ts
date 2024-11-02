@@ -25,7 +25,7 @@ export class UserLoginComponent  implements OnInit{
       const token = this.authService.authUser(loginForm.value);
       if (token) {
         localStorage.setItem('token', token.userName);
-        this.alertify.success('Login Succesful');
+        this.alertify.success('Login Successful');
         this.router.navigate(['/']);
       } else {
         this.alertify.error('Login not Successful');
