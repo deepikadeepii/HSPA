@@ -6,6 +6,7 @@ import { IPropertyBase } from '../../model/ipropertybase';
 import { Property } from '../../model/property';
 import { HousingService } from '../../services/housing.service';
 import { AlertifyService } from '../../services/alertify.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-add-property',
@@ -240,7 +241,7 @@ get Description() {
         this.property.AOP = this.AOP.value;
         this.property.Gated = this.Gated.value;
         this.property.MainEntrance = this.MainEntrance.value;
-        this.property.Possession = this.PossessionOn.value;
+        this.property.estPossessionOn = this.PossessionOn.value;
         this.property.Description = this.Description.value;
         this.property.PostedOn = new Date().toString();
   }
